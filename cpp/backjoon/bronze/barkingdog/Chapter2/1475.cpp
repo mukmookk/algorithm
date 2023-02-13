@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// # 1 map 풀이
 unordered_map<int, int> num;
 
 int main() {
@@ -30,3 +31,41 @@ int main() {
     
     cout << pr->second << "\n";
 }
+
+// // # 2 배열 풀이
+// int main() {
+//     int N;
+//     itn cnt[9];
+//     int cur;
+//     int max;
+
+//     cin >> N;
+
+//     fill(cnt, cnt + 9, 0);
+
+//     if (N == 0) cnt[0]++;
+
+//     while (N > 0) {
+//         cur = N % 10;
+//         if (cur == 9) {
+//             cnt[6]++;
+//         }
+//         else {
+//             cnt[cur]++;
+//         }
+//         N /= 10;
+//     }
+
+//     int temp = cnt[6] % 2;
+//     cnt[6] /= 2;
+//     cnt[6] += temp;
+
+//     max = cnt[0];
+//     for (int i = 1; i < 9; i++) {
+//         if (max < cnt[i]) {
+//             max = cnt[i];
+//         }
+//     }
+//     cout << max << "\n";
+//     return 0;
+// }
