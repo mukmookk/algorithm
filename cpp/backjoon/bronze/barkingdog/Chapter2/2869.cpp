@@ -27,6 +27,9 @@ int main() {
     day (A - B) = B + V
     day = (V - B) / (A - B), 문제의 조건으로부터 A != B 확인 가능
     */
+    3 / 2 = 1
+    3 * 1.0 / 2 = 1.5
+    
     day = ceil((V - B) * 1.0 / (A - B));
     cout << day;
 
