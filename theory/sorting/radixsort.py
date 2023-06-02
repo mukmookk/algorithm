@@ -1,29 +1,42 @@
-def radix_sort(nums):
-    RADIX = 10
-    max_length = False
-    digit = 1
+radixSort(L, int radix, int numFields) {
+    List[] bucket = new List[radix];
+    int field;
+    
+    List newL;
+    newL = L;
+    
+    For (field = 0; field < numFileds; field++) {
+        // bucket array 초기화
+        Distribute(newL, buckets, radix, field);
+        newL = combine(buckets, radix)
+    }
+    return newL;
+}
+---
 
-    while not max_length:
-        max_length = True
-        buckets = [list() for _ in range(RADIX)]
+distribute(L, buckets, radix, field) {
+    List remL;
+    remL = L;
+    
+    while (remL != nil) {
+        Element K = first(remL);
+        int b = maskShift(field, radix, K.key);
+        bucket[b] = cons(K, buckets[k])
+        remL = rest(remL)
+    }    
+}
 
-        for num in nums:
-            tmp = num // digit
-            buckets[tmp % RADIX].append(num)
-            if max_length and tmp > 0:
-                max_length = False
-
-        i = 0
-        for j in range(RADIX):
-            bucket = buckets[j]
-            print(j, bucket)
-            for num in bucket:
-                nums[i] = num
-                i += 1
-        digit *= RADIX
-
-    return nums
-
-output = radix_sort([112, 122, 102, 122, 92])
-
-print(output)
+List Combine(List [] buckets, int radix) {
+    int b;
+    List L, remBucket;
+    L = nil
+    
+    for (b = radix - 1; b >= 0; b--) {
+        remBucket = buckets[b];
+        while (remBucket != nil) {
+            K = first(rembucekt)
+            L = cons(K, L);
+            remBuckey = rest(remBucket)
+        }
+    }
+}
